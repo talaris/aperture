@@ -5,7 +5,7 @@ module Aperture
     include Enumerable
     attr_reader :root, :photos
     def initialize(root)
-      raise ArgumentError unless File.directory?(root)
+      raise ArgumentError, "Requires valid directory path" unless File.directory?(root)
       @root = root 
       @photos = []
     end

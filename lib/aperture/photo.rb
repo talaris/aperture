@@ -6,6 +6,7 @@ module Aperture
       
       def initialize(path)
         @path = path
+        raise ArgumentError, "Requires valid directory path" unless File.directory?(@path)
         @versions = []
       end
     

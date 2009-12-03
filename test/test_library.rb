@@ -8,13 +8,13 @@ class TestLibrary < Test::Unit::TestCase
     
     should "create require a path" do
       assert_raise ArgumentError do
-        library = Aperture::Library.new()
+        Aperture::Library.new()
       end
     end
     
     should "required path should be a directory" do
       assert_raise ArgumentError do
-        library = Aperture::Library.new('root')
+        Aperture::Library.new('root')
       end
     end
     

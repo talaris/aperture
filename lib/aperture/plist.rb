@@ -1,7 +1,7 @@
 
 module Aperture
-    class Version < Plist
-    attr_reader :filename
+    class Plist
+    attr_reader :root, :elements
     def initialize(filename)
       @filename = filename
     end

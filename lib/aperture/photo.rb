@@ -1,19 +1,22 @@
 
 module Aperture
     class Photo
-    attr_reader :versions, :path
-    def initialize(path)
-      @path = path
-      @verisions = []
-    end
-    
-    def <<(version)
-      @versions << version
-    end
-    
-    def each
+      include Enumerable
+      attr_reader :versions, :path
       
-    end
+      def initialize(path)
+        @path = path
+        @versions = []
+      end
+    
+      def <<(version)
+        @versions << version
+      end
+    
+      def each &blk
+        @versions.each &blk
+      end
+
     
   end
 end

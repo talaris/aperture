@@ -1,6 +1,16 @@
-require 'rubygems'
+module Aperture
+  VERSION = "0.1.0"
+end
 
-require 'aperture/plist'
+
+begin
+  require 'plist'
+rescue LoadError
+  require 'rubygems'
+  require 'plist'
+end
+
 require 'aperture/library'
 require 'aperture/version'
 require 'aperture/photo'
+

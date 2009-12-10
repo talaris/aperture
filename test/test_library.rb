@@ -3,7 +3,7 @@ require 'helper'
 class TestLibrary < Test::Unit::TestCase
   context "#initialize" do
     setup do
-      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
+      @library = Library.new(SAMPLE_LIBRARY_PATH)
     end
     
     should "create require a path" do
@@ -18,7 +18,7 @@ class TestLibrary < Test::Unit::TestCase
       end
     end
     
-    should "create a new object" do
+    should "create a new library object" do
       assert_instance_of(Aperture::Library, @library)
     end
     
@@ -33,7 +33,7 @@ class TestLibrary < Test::Unit::TestCase
   
   context "#index" do
     setup do
-      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
+      @library = Library.new(SAMPLE_LIBRARY_PATH)
       @library.index
     end
 
@@ -74,25 +74,52 @@ class TestLibrary < Test::Unit::TestCase
     end
   end
   
-  context "each" do
+  context "photo_count" do
     setup do
       @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
       @library.index
     end
 
-    should "iterate over all the photos" do
-      versions = 0
-      @library.each {|p| versions += p.versions.size}
-      assert_equal versions, 12
-    end
-    
-    should "give us access to inject" do
-      versions = @library.map {|p| p.versions.size }
-      assert_equal versions, [2]*6
+    should "should return all 6 photos" do
+      assert_equal @library.photo_count, 6
     end
   end
   
-  
-  
+  context "version_count" do
+    setup do
+      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
+      @library.index
+    end
 
+    should "should return all 12 versions" do
+      assert_equal @library.version_count, 12
+    end
+  end
+  
+  context "camera_model_count_hash" do
+    setup do
+      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
+      @library.index
+      @library.parse_all
+    end
+
+    should "Find 6 photos from 'Canon PowerShot SD770 IS'" do
+      camera_model = 'Canon PowerShot SD770 IS'
+      assert_equal @library.camera_model_count_hash, { camera_model => 6 }
+    end
+  end
+  
+  context "lens_model_count_hash" do
+    setup do
+      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
+      @library.index
+      @library.parse_all
+    end
+
+    should "Find 6 photos from lens '6.2-18.6 mm'" do
+      lens_model = '6.2-18.6 mm'
+      assert_equal @library.lens_model_count_hash, { lens_model => 6 }
+    end
+  end
+  
 end

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createDate</key>
+	<date>2009-12-11T00:11:58Z</date>
+	<key>dateLastSavedInDatabase</key>
+	<date>2009-12-11T00:11:58Z</date>
+	<key>extension</key>
+	<string>JPG</string>
+	<key>fileCreationDate</key>
+	<date>2008-12-07T00:07:12Z</date>
+	<key>fileIsReference</key>
+	<false/>
+	<key>fileModificationDate</key>
+	<date>2008-12-07T00:07:18Z</date>
+	<key>fileSize</key>
+	<integer>248594</integer>
+	<key>isExternallyEditable</key>
+	<false/>
+	<key>isOriginalFile</key>
+	<true/>
+	<key>isTrulyRaw</key>
+	<false/>
+	<key>masterUuid</key>
+	<string>sqvYqoSTS7m1a8hAoPyMmg</string>
+	<key>name</key>
+	<string>IMG_3690.jpg</string>
+	<key>projectUuidChangeDate</key>
+	<date>0000-12-30T00:00:00Z</date>
+	<key>subtype</key>
+	<string>IMGST</string>
+	<key>type</key>
+	<string>IMGT</string>
+	<key>uuid</key>
+	<string>ujqdI+KKRS+5V/Y1tY6z5A</string>
+	<key>version</key>
+	<integer>74</integer>
+</dict>
+</plist>

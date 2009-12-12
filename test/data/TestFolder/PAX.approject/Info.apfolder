@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createDate</key>
+	<date>2009-12-11T00:18:42Z</date>
+	<key>dateLastSavedInDatabase</key>
+	<date>2009-12-11T00:19:16Z</date>
+	<key>folderType</key>
+	<integer>2</integer>
+	<key>isMissing</key>
+	<false/>
+	<key>libraryRelativePath</key>
+	<string>TestFolder/PAX.approject</string>
+	<key>masterFileChangeDate</key>
+	<date>2009-12-11T00:18:42Z</date>
+	<key>metadataChangeDate</key>
+	<date>2009-12-11T00:18:47Z</date>
+	<key>name</key>
+	<string>PAX.approject</string>
+	<key>parentFolderUuid</key>
+	<string>yAe/mbGVS6yPG2+oP/O8Dg</string>
+	<key>posterVersionUuid</key>
+	<string>kpK4rJKCTsS6MnPpmapcPQ</string>
+	<key>projectAutomaticallyGenerateFullSizePreviews</key>
+	<true/>
+	<key>projectCompatibleBackToVersion</key>
+	<integer>4</integer>
+	<key>projectVersion</key>
+	<integer>4</integer>
+	<key>uuid</key>
+	<string>LIggdXdQSXu5Pn+kRA7/0A</string>
+	<key>version</key>
+	<integer>74</integer>
+</dict>
+</plist>

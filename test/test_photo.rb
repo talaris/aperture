@@ -33,20 +33,20 @@ class TestPhoto < Test::Unit::TestCase
     
   end
   
-  context "original_version" do
-    setup do
-      @photo = Photo.new(SAMPLE_PHOTO_PATH)
-      @photo.versions << Version.new(SAMPLE_ORIGINAL_FILENAME, @photo)
-      @photo.versions << Version.new(SAMPLE_VERSION_FILENAME, @photo)
-    end
+  # context "original_version" do
+  #   setup do
+  #     @photo = Photo.new(SAMPLE_PHOTO_PATH)
+  #     @photo.versions << Version.new(SAMPLE_ORIGINAL_FILENAME, @photo)
+  #     @photo.versions << Version.new(SAMPLE_VERSION_FILENAME, @photo)
+  #   end
+  # 
+  #   should "pickout the Original info file" do
+  #     original = @photo.original_version
+  #     assert_equal "OriginalVersionInfo.apversion", original.filename
+  #   end
+  # end
 
-    should "pickout the Original info file" do
-      original = @photo.original_version
-      assert_equal "OriginalVersionInfo.apversion", original.filename
-    end
-  end
-
-  context "original_version" do
+  context "version(n)" do
     setup do
       @photo = Photo.new(SAMPLE_PHOTO_PATH)
       @photo.versions << Version.new(SAMPLE_ORIGINAL_FILENAME, @photo)

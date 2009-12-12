@@ -40,3 +40,30 @@ end
 task :test => :check_dependencies
 
 task :default => :test
+
+require 'fileutils'
+require 'find'
+namespace "library" do
+  desc "Copies key directories and files from an Aperture library into 'test/data'. Defaults to cloning your entire Aperture Library."
+  task :clone, [:library_path, :test_path] do |t, args|
+    args.with_defaults(
+      :library_path => File.join(ENV['HOME'], 'Pictures', 'Aperture Library.aplibrary'), 
+      :test_path => File.join(File.dirname(__FILE__), 'test', 'data')
+      )
+    library_path, test_path = args[:library_path], args[:test_path]
+
+    raise ArgumentError, "Requires valid directory path" unless File.directory?(library_path)
+    FileUtils.mkdir_p(test_path)
+    
+    
+    Find.find(library_path) do |path|
+      clone_path = File.join(test_path, path.partition(library_path)[2])
+      next if path =~ /Thumbnails|Previews/
+      FileUtils.mkdir_p(clone_path) if File.directory?(path)
+      if path =~  /\.apfolder|\.implicitAlbum|\.apsmartalbum|\.apmaster|\.apversion|\.apfile/
+        FileUtils.cp(path, clone_path)
+      end
+    end
+      
+  end
+end

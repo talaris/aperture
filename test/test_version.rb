@@ -36,7 +36,7 @@ class TestPhoto < Test::Unit::TestCase
     end
     
     should "pick out the right uuid for the version" do
-      assert_equal @version.attributes['uuid'], 'nrS1aAXpRh2391GcraU5lw'
+      assert_equal @version.attributes['uuid'], 'PryZQJZRSaqB0BdzD2AIAA'
     end
     
     should "build a hash for EXIF Properties" do

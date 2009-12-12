@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createDate</key>
+	<date>2009-12-11T00:13:33Z</date>
+	<key>dateLastSavedInDatabase</key>
+	<date>2009-12-11T00:13:46Z</date>
+	<key>folderType</key>
+	<integer>2</integer>
+	<key>isMissing</key>
+	<false/>
+	<key>libraryRelativePath</key>
+	<string>TestFolder/Fireworks.approject</string>
+	<key>masterFileChangeDate</key>
+	<date>2009-12-11T00:13:33Z</date>
+	<key>metadataChangeDate</key>
+	<date>2009-12-11T00:13:37Z</date>
+	<key>name</key>
+	<string>Fireworks.approject</string>
+	<key>parentFolderUuid</key>
+	<string>yAe/mbGVS6yPG2+oP/O8Dg</string>
+	<key>posterVersionUuid</key>
+	<string>PryZQJZRSaqB0BdzD2AIAA</string>
+	<key>projectAutomaticallyGenerateFullSizePreviews</key>
+	<true/>
+	<key>projectCompatibleBackToVersion</key>
+	<integer>4</integer>
+	<key>projectVersion</key>
+	<integer>4</integer>
+	<key>uuid</key>
+	<string>eJiEe+6zRKmEUsEiKqiWVQ</string>
+	<key>version</key>
+	<integer>74</integer>
+</dict>
+</plist>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createDate</key>
+	<date>2009-12-11T00:08:24Z</date>
+	<key>dateLastSavedInDatabase</key>
+	<date>2009-12-11T00:08:25Z</date>
+	<key>folderType</key>
+	<integer>4</integer>
+	<key>isMissing</key>
+	<false/>
+	<key>libraryRelativePath</key>
+	<string>dotMacWebGalleryProject.approject</string>
+	<key>masterFileChangeDate</key>
+	<date>2009-12-11T00:08:24Z</date>
+	<key>metadataChangeDate</key>
+	<date>2009-12-11T00:08:24Z</date>
+	<key>name</key>
+	<string>dotMacWebGalleryProject.approject</string>
+	<key>parentFolderUuid</key>
+	<string>Kj1eGir7SyiZ1B/uQrgfcQ</string>
+	<key>projectAutomaticallyGenerateFullSizePreviews</key>
+	<true/>
+	<key>projectCompatibleBackToVersion</key>
+	<integer>4</integer>
+	<key>projectVersion</key>
+	<integer>4</integer>
+	<key>uuid</key>
+	<string>DFq04osdS16bjraVbPisrQ</string>
+	<key>version</key>
+	<integer>74</integer>
+</dict>
+</plist>

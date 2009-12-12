@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colorLabelIndex</key>
+	<integer>-1</integer>
+	<key>createDate</key>
+	<date>2009-12-11T00:09:41Z</date>
+	<key>dateLastSavedInDatabase</key>
+	<date>2009-12-11T00:10:48Z</date>
+	<key>exifProperties</key>
+	<dict>
+		<key>CaptureDayOfMonth</key>
+		<real>1</real>
+		<key>CaptureDayOfWeek</key>
+		<real>2</real>
+		<key>CaptureHourOfDay</key>
+		<real>22</real>
+		<key>CaptureMinuteOfHour</key>
+		<real>51</real>
+		<key>CaptureMonthOfYear</key>
+		<real>12</real>
+		<key>CaptureSecondOfMinute</key>
+		<real>38</real>
+		<key>CaptureYear</key>
+		<real>2009</real>
+		<key>ColorModel</key>
+		<string>RGB</string>
+		<key>Depth</key>
+		<real>8</real>
+		<key>ImageDate</key>
+		<date>2009-12-02T06:51:38Z</date>
+		<key>PixelHeight</key>
+		<real>480</real>
+		<key>PixelWidth</key>
+		<real>320</real>
+	</dict>
+	<key>exportImageChangeDate</key>
+	<date>2009-12-11T00:09:41Z</date>
+	<key>exportMetadataChangeDate</key>
+	<date>2009-12-11T00:09:41Z</date>
+	<key>fileName</key>
+	<string>IMG_0459 - 2009-12-01 at 22-51-38.PNG</string>
+	<key>fileUuid</key>
+	<string>D/ornGQbQv+H2V7vlXCLPA</string>
+	<key>fullSizePreviewChangeDate</key>
+	<date>2009-12-11T00:09:47Z</date>
+	<key>fullSizePreviewPath</key>
+	<string>2009-12-10 @ 04:09:41 PM - 1.apimportgroup/IMG_0459/Previews/IMG_0459.jpg</string>
+	<key>fullSizePreviewUpToDate</key>
+	<true/>
+	<key>hasAdjustments</key>
+	<false/>
+	<key>hasEnabledAdjustments</key>
+	<false/>
+	<key>imageDate</key>
+	<date>2009-12-02T06:51:38Z</date>
+	<key>imageTimeZoneName</key>
+	<string>America/Los_Angeles</string>
+	<key>isEditable</key>
+	<integer>1</integer>
+	<key>mainRating</key>
+	<integer>0</integer>
+	<key>masterHeight</key>
+	<integer>480</integer>
+	<key>masterThumbnailCacheIndex</key>
+	<integer>2</integer>
+	<key>masterUuid</key>
+	<string>MLv2L8BpQuSr7rUMIzIv6Q</string>
+	<key>masterWidth</key>
+	<integer>320</integer>
+	<key>miniCacheIndex</key>
+	<integer>1</integer>
+	<key>name</key>
+	<string>IMG_0459 - 2009-12-01 at 22-51-38</string>
+	<key>previewJpegHeight</key>
+	<integer>240</integer>
+	<key>previewJpegWidth</key>
+	<integer>160</integer>
+	<key>previewRendered</key>
+	<integer>0</integer>
+	<key>processedHeight</key>
+	<integer>480</integer>
+	<key>processedWidth</key>
+	<integer>320</integer>
+	<key>projectUuid</key>
+	<string>aoKJT4gNTc2oaoChmjxjzA</string>
+	<key>rotation</key>
+	<integer>0</integer>
+	<key>thumbnailCacheIndex</key>
+	<integer>1</integer>
+	<key>thumbnailPreviewPath</key>
+	<string>2009-12-10 @ 04:09:41 PM - 1.apimportgroup/IMG_0459/Thumbnails/IMG_0459.jpg</string>
+	<key>thumbnailRendered</key>
+	<integer>0</integer>
+	<key>thumbnailsCurrent</key>
+	<true/>
+	<key>tinyCacheIndex</key>
+	<integer>1</integer>
+	<key>uuid</key>
+	<string>UtDpQqACTkOOFCa8oXSfug</string>
+	<key>version</key>
+	<integer>74</integer>
+	<key>versionNumber</key>
+	<integer>1</integer>
+</dict>
+</plist>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createDate</key>
+	<date>2009-12-11T18:10:52Z</date>
+	<key>dateLastSavedInDatabase</key>
+	<date>2009-12-11T18:10:52Z</date>
+	<key>extension</key>
+	<string>CRW</string>
+	<key>fileCreationDate</key>
+	<date>2008-07-04T18:54:02Z</date>
+	<key>fileIsReference</key>
+	<false/>
+	<key>fileModificationDate</key>
+	<date>2008-07-04T18:54:02Z</date>
+	<key>fileSize</key>
+	<integer>5531574</integer>
+	<key>isExternallyEditable</key>
+	<false/>
+	<key>isOriginalFile</key>
+	<true/>
+	<key>isTrulyRaw</key>
+	<true/>
+	<key>masterUuid</key>
+	<string>NFve8xvuRPO5fCO+62GI9Q</string>
+	<key>name</key>
+	<string>CRW_0008 - 2008-07-04 at 11-54-02.CRW</string>
+	<key>projectUuidChangeDate</key>
+	<date>0000-12-30T00:00:00Z</date>
+	<key>subtype</key>
+	<string>RAWST</string>
+	<key>type</key>
+	<string>IMGT</string>
+	<key>uuid</key>
+	<string>eMQHB8JYTJG36Rzj6HGThQ</string>
+	<key>version</key>
+	<integer>74</integer>
+</dict>
+</plist>

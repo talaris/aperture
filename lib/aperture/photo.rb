@@ -16,9 +16,9 @@ module Aperture
         end        
       end
       
-      def original_version
-        return @versions.select {|v| v.filename == "OriginalVersionInfo.apversion"}.first
-      end
+      # def original_version
+      #   return @versions.select {|v| v.filename == "OriginalVersionInfo.apversion"}.first
+      # end
       
       def version(n)
         return @versions.select {|v| v.filename == "Version-#{n}.apversion"}.first

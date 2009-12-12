@@ -12,7 +12,7 @@ module Aperture
     
     def index
       Find.find(root) do |path|
-        if path =~ /\.apversion$/
+        if path =~ /Version-.+\.apversion$/
           directory = File.dirname(path)
           filename = File.basename(path)
           
@@ -49,7 +49,7 @@ module Aperture
     def camera_model_count_hash
       hash = Hash.new(0)
       @photos.each do |photo|
-        model = photo.original_version.attributes['exifProperties']['Model']
+        model = photo.version(1).attributes['exifProperties']['Model']
         hash[model] += 1
       end
 
@@ -59,12 +59,16 @@ module Aperture
     def lens_model_count_hash
       hash = Hash.new(0)
       @photos.each do |photo|
-        model = photo.original_version.attributes['exifProperties']['LensModel']
+        model = photo.version(1).attributes['exifProperties']['LensModel']
         hash[model] += 1
       end
 
       return hash
     end
+    
+    # def find_photos_by_keyword
+    
+    # def find_photos_by_rating
     
     
   end

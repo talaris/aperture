@@ -37,13 +37,18 @@ class TestLibrary < Test::Unit::TestCase
       @library.index
     end
 
-    should "find 6 photos" do
-      assert_equal @library.photos.size, 6
+    should "find 24 photos" do
+      assert_equal @library.photos.size, 24
     end
     
-    should "find 2 versions in IMG_1753" do
+    should "find 1 versions in IMG_1753" do
       photo = @library.find_photo_by_path(SAMPLE_PHOTO_PATH)
-      assert_equal photo.versions.size, 2
+      assert_equal photo.versions.size, 1
+    end
+    
+    should "find 11 version of 2008-Costume Contest" do
+      photo = @library.find_photo_by_path(File.join(SAMPLE_LIBRARY_PATH, '/Misc.approject/2009-12-10 @ 04:11:58 PM - 2.apimportgroup/2008-Costume Contest 030'))
+      assert_equal photo.versions.size, 11
     end
   end
   
@@ -80,8 +85,8 @@ class TestLibrary < Test::Unit::TestCase
       @library.index
     end
 
-    should "should return all 6 photos" do
-      assert_equal @library.photo_count, 6
+    should "should return all 24 photos" do
+      assert_equal @library.photo_count, 24
     end
   end
   
@@ -91,8 +96,8 @@ class TestLibrary < Test::Unit::TestCase
       @library.index
     end
 
-    should "should return all 12 versions" do
-      assert_equal @library.version_count, 12
+    should "should return all 34 versions" do
+      assert_equal @library.version_count, 34
     end
   end
   
@@ -105,7 +110,7 @@ class TestLibrary < Test::Unit::TestCase
 
     should "Find 6 photos from 'Canon PowerShot SD770 IS'" do
       camera_model = 'Canon PowerShot SD770 IS'
-      assert_equal @library.camera_model_count_hash, { camera_model => 6 }
+      assert_equal @library.camera_model_count_hash[camera_model], 12
     end
   end
   
@@ -118,7 +123,7 @@ class TestLibrary < Test::Unit::TestCase
 
     should "Find 6 photos from lens '6.2-18.6 mm'" do
       lens_model = '6.2-18.6 mm'
-      assert_equal @library.lens_model_count_hash, { lens_model => 6 }
+      assert_equal @library.lens_model_count_hash[lens_model], 12
     end
   end
   

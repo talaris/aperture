@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createDate</key>
+	<date>2009-12-11T18:08:53Z</date>
+	<key>dateLastSavedInDatabase</key>
+	<date>2009-12-11T18:11:00Z</date>
+	<key>folderType</key>
+	<integer>2</integer>
+	<key>isMissing</key>
+	<false/>
+	<key>libraryRelativePath</key>
+	<string>DSLR.approject</string>
+	<key>masterFileChangeDate</key>
+	<date>2009-12-11T18:08:53Z</date>
+	<key>metadataChangeDate</key>
+	<date>2009-12-11T18:09:03Z</date>
+	<key>name</key>
+	<string>DSLR.approject</string>
+	<key>parentFolderUuid</key>
+	<string>Kj1eGir7SyiZ1B/uQrgfcQ</string>
+	<key>posterVersionUuid</key>
+	<string>DAfizze7RJa/pqI8HJdrsg</string>
+	<key>projectAutomaticallyGenerateFullSizePreviews</key>
+	<true/>
+	<key>projectCompatibleBackToVersion</key>
+	<integer>4</integer>
+	<key>projectVersion</key>
+	<integer>4</integer>
+	<key>uuid</key>
+	<string>74ombbeaTDWnbB4jNVeTJQ</string>
+	<key>version</key>
+	<integer>74</integer>
+</dict>
+</plist>

@@ -22,19 +22,22 @@ class TestLibrary < Test::Unit::TestCase
       assert_instance_of(Aperture::Library, @library)
     end
     
+    should "photos should be a photoset" do
+      assert_instance_of(Aperture::PhotoSet, @library.photos)
+    end    
+    
     should "set root is a directory" do
       assert File.directory?(@library.root)
     end
     
     should "set photos to an empty array" do
-      assert_equal @library.photos, []
+      assert_equal @library.photos.size, 0
     end
   end
   
   context "#index" do
     setup do
-      @library = Library.new(SAMPLE_LIBRARY_PATH)
-      @library.index
+      @library = SAMPLE_LIBRARY
     end
 
     should "find 24 photos" do
@@ -54,8 +57,7 @@ class TestLibrary < Test::Unit::TestCase
   
   context "find_photo_by_path" do
     setup do
-      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
-      @library.index
+      @library = SAMPLE_LIBRARY
       @photo = @library.find_photo_by_path(SAMPLE_PHOTO_PATH)
     end
     
@@ -79,52 +81,6 @@ class TestLibrary < Test::Unit::TestCase
     end
   end
   
-  context "photo_count" do
-    setup do
-      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
-      @library.index
-    end
 
-    should "should return all 24 photos" do
-      assert_equal @library.photo_count, 24
-    end
-  end
-  
-  context "version_count" do
-    setup do
-      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
-      @library.index
-    end
-
-    should "should return all 34 versions" do
-      assert_equal @library.version_count, 34
-    end
-  end
-  
-  context "camera_model_count_hash" do
-    setup do
-      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
-      @library.index
-      @library.parse_all
-    end
-
-    should "Find 6 photos from 'Canon PowerShot SD770 IS'" do
-      camera_model = 'Canon PowerShot SD770 IS'
-      assert_equal @library.camera_model_count_hash[camera_model], 12
-    end
-  end
-  
-  context "lens_model_count_hash" do
-    setup do
-      @library = Aperture::Library.new(SAMPLE_LIBRARY_PATH)
-      @library.index
-      @library.parse_all
-    end
-
-    should "Find 6 photos from lens '6.2-18.6 mm'" do
-      lens_model = '6.2-18.6 mm'
-      assert_equal @library.lens_model_count_hash[lens_model], 12
-    end
-  end
   
 end

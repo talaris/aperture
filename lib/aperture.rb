@@ -13,4 +13,4 @@ end
 require 'aperture/library'
 require 'aperture/version'
 require 'aperture/photo'
-
+require 'aperture/photo_set'

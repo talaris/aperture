@@ -95,29 +95,31 @@
 	<key>InfoDictionary</key>
 	<dict>
 		<key>albumSubclass</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>albumType</key>
 		<integer>1</integer>
 		<key>createDate</key>
-		<date>2009-12-11T00:08:24Z</date>
+		<date>2009-12-14T09:44:51Z</date>
 		<key>dateLastSavedInDatabase</key>
-		<date>2009-12-12T00:17:16Z</date>
+		<date>2009-12-14T09:46:05Z</date>
 		<key>folderUuid</key>
-		<string>DFq04osdS16bjraVbPisrQ</string>
+		<string>Kj1eGir7SyiZ1B/uQrgfcQ</string>
 		<key>metadataChangeDate</key>
-		<date>2009-12-11T00:08:24Z</date>
+		<date>2009-12-14T09:46:05Z</date>
 		<key>name</key>
-		<string>Album.implicitAlbum</string>
-		<key>queryFolderUuid</key>
-		<string>DFq04osdS16bjraVbPisrQ</string>
+		<string>TestRootAlbum.apalbum</string>
 		<key>sortAscending</key>
 		<true/>
 		<key>sortKeyPath</key>
 		<string>exifProperties.ImageDate</string>
 		<key>uuid</key>
-		<string>5GdI43ZrS4KrInKRnSBuyw</string>
+		<string>+yZxlPSuRm6hOkOZ8g6ShA</string>
 		<key>version</key>
 		<integer>74</integer>
+		<key>versionUuids</key>
+		<array>
+			<string>kpK4rJKCTsS6MnPpmapcPQ</string>
+		</array>
 	</dict>
 </dict>
 </plist>

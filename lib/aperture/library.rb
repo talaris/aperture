@@ -4,10 +4,11 @@ module Aperture
   class Library
     attr_reader :root, :photos
     
+     
     def initialize(root)
       raise ArgumentError, "Requires valid directory path" unless File.directory?(root)
       @root = root 
-      @photos = []
+      @photos = Aperture::PhotoSet.new
     end
     
     def index
@@ -28,6 +29,14 @@ module Aperture
       end        
     end
     
+    
+    def self.parse(root_path)
+      library = new(root_path)
+      library.index
+      library.parse_all
+      return library
+    end
+    
     def find_photo_by_path(path)
       return @photos.select {|p| p.path == path}.first
     end
@@ -37,39 +46,5 @@ module Aperture
       @photos << photo
       return photo
     end
-    
-    def photo_count
-      return @photos.size
-    end
-    
-    def version_count
-      return @photos.inject(0) {|sum, photo| sum += photo.versions.size}      
-    end
-    
-    def camera_model_count_hash
-      hash = Hash.new(0)
-      @photos.each do |photo|
-        model = photo.version(1).attributes['exifProperties']['Model']
-        hash[model] += 1
-      end
-
-      return hash
-    end
-    
-    def lens_model_count_hash
-      hash = Hash.new(0)
-      @photos.each do |photo|
-        model = photo.version(1).attributes['exifProperties']['LensModel']
-        hash[model] += 1
-      end
-
-      return hash
-    end
-    
-    # def find_photos_by_keyword
-    
-    # def find_photos_by_rating
-    
-    
   end
 end

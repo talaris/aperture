@@ -95,29 +95,51 @@
 	<key>InfoDictionary</key>
 	<dict>
 		<key>albumSubclass</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>albumType</key>
 		<integer>1</integer>
 		<key>createDate</key>
-		<date>2009-12-11T00:08:24Z</date>
+		<date>2009-12-11T00:11:26Z</date>
 		<key>dateLastSavedInDatabase</key>
-		<date>2009-12-12T00:17:16Z</date>
+		<date>2009-12-11T18:12:02Z</date>
 		<key>folderUuid</key>
-		<string>DFq04osdS16bjraVbPisrQ</string>
+		<string>aoKJT4gNTc2oaoChmjxjzA</string>
 		<key>metadataChangeDate</key>
-		<date>2009-12-11T00:08:24Z</date>
+		<date>2009-12-11T18:11:56Z</date>
 		<key>name</key>
-		<string>Album.implicitAlbum</string>
-		<key>queryFolderUuid</key>
-		<string>DFq04osdS16bjraVbPisrQ</string>
+		<string>Halloween.apalbum</string>
 		<key>sortAscending</key>
 		<true/>
 		<key>sortKeyPath</key>
 		<string>exifProperties.ImageDate</string>
 		<key>uuid</key>
-		<string>5GdI43ZrS4KrInKRnSBuyw</string>
+		<string>gdEGyJxCR02AQsIFXQKBoA</string>
 		<key>version</key>
 		<integer>74</integer>
+		<key>versionUuids</key>
+		<array>
+			<string>8MbxD4RXSB+zwuvoKN4MKA</string>
+			<string>/CjqnrkzRvK3zlXlnvEjfA</string>
+			<string>+UmNYy4kQ0y8f8ZshULHng</string>
+			<string>bokzJkCMSGa3pp/+sdBRAA</string>
+			<string>QlfG7SKqSEWS1at7PMg8kw</string>
+			<string>yLJcUtMFQ3+eFIOegUGong</string>
+			<string>EPQmlftkTd6X6juQgA5f3w</string>
+			<string>Mh6SZ7QYS6ef1bzaof5vZA</string>
+			<string>NriU9QGYRJaanMYx1CUPrg</string>
+			<string>WL6TqjZ+SfKDjqnOK7C0Eg</string>
+			<string>UzbECtYAR/STO1Wf+ESBPw</string>
+			<string>phS8QPLVRq+S2PsAzyDb0w</string>
+		</array>
 	</dict>
+	<key>StackStates</key>
+	<array>
+		<dict>
+			<key>isExpanded</key>
+			<true/>
+			<key>stackUuid</key>
+			<string>SGT0VXgDQESX+59FltjItw</string>
+		</dict>
+	</array>
 </dict>
 </plist>

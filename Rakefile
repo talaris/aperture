@@ -44,7 +44,7 @@ task :default => :test
 require 'fileutils'
 require 'find'
 namespace "library" do
-  desc "Copies key directories and files from an Aperture library into 'test/data'. Defaults to cloning your entire Aperture Library."
+  desc "Copies key directories and metadata files from an Aperture library into 'test/data'. Defaults to cloning your entire Aperture Library."
   task :clone, [:library_path, :test_path] do |t, args|
     args.with_defaults(
       :library_path => File.join(ENV['HOME'], 'Pictures', 'Aperture Library.aplibrary'), 
@@ -60,7 +60,7 @@ namespace "library" do
       clone_path = File.join(test_path, path.partition(library_path)[2])
       next if path =~ /Thumbnails|Previews/
       FileUtils.mkdir_p(clone_path) if File.directory?(path)
-      if path =~  /\.apfolder|\.implicitAlbum|\.apsmartalbum|\.apmaster|\.apversion|\.apfile/
+      if path =~  /\.apfolder|\.implicitAlbum|\.apsmartalbum|\.apmaster|\.apversion|\.apfile|\.apalbum/
         FileUtils.cp(path, clone_path)
       end
     end

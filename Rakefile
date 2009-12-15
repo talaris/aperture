@@ -58,7 +58,7 @@ namespace "library" do
     
     Find.find(library_path) do |path|
       clone_path = File.join(test_path, path.partition(library_path)[2])
-      next if path =~ /Thumbnails|Previews/
+      Find.prune if path =~ /Thumbnails|Previews/
       FileUtils.mkdir_p(clone_path) if File.directory?(path)
       if path =~  /\.apfolder|\.implicitAlbum|\.apsmartalbum|\.apmaster|\.apversion|\.apfile|\.apalbum/
         FileUtils.cp(path, clone_path)

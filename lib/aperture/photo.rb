@@ -1,12 +1,13 @@
 
 module Aperture
   class Photo
-    attr_accessor :versions, :path, :file_attributes, :master_attributes
+    attr_accessor :path, :versions, :albums, :project, :file_attributes, :master_attributes
     
     def initialize(path)
       @path = path
       raise ArgumentError, "Requires valid directory path" unless File.directory?(@path)
       @versions = []
+      @albums = []
     end
     
     def version(n)

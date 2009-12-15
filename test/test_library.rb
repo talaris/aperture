@@ -24,6 +24,11 @@ class TestLibrary < Test::Unit::TestCase
     
     should "photos should be a photoset" do
       assert_instance_of(Aperture::PhotoSet, @library.photos)
+    end
+    
+    should "albums should be a empty array" do
+      assert_instance_of(Array, @library.albums)
+      assert @library.albums.empty?
     end    
     
     should "set root is a directory" do
@@ -42,6 +47,14 @@ class TestLibrary < Test::Unit::TestCase
 
     should "find 24 photos" do
       assert_equal @library.photos.size, 24
+    end
+    
+    should "find 2 albums" do
+      assert_equal @library.albums.size, 2
+    end
+      
+    should "find 5 projects" do
+      assert_equal @library.projects.size, 5
     end
     
     should "find 1 versions in IMG_1753" do

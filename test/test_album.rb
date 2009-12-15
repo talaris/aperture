@@ -15,6 +15,4 @@ class TestAlbum < Test::Unit::TestCase
       assert_instance_of Hash, @album.attributes
     end
   end
-  
-  
 end

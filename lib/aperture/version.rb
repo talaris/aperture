@@ -1,17 +1,13 @@
 
 module Aperture
     class Version
-    attr_accessor :filename, :photo, :attributes
+    attr_accessor :photo, :attributes, :filename
     
     
-    def initialize(filename, photo)
-      @filename = filename
-      @photo = photo
+    def initialize(filename, attributes, photo)
+      @attributes = attributes
+      @filename   = filename
+      @photo      = photo
     end
-    
-    def parse
-      @attributes = Plist::parse_xml( File.join(photo.path, @filename) )
-    end
-    
   end
 end

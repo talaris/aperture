@@ -17,7 +17,7 @@ module Aperture
     end
         
     def method_missing(sym, *args, &block)
-      @photos.send sym, *args, &block
+      @photos.send(sym, *args, &block) if @photos.respond_to?(sym)
     end
     
     

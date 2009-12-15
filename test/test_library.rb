@@ -35,7 +35,7 @@ class TestLibrary < Test::Unit::TestCase
     end
   end
   
-  context "#index" do
+  context "parsed library" do
     setup do
       @library = SAMPLE_LIBRARY
     end

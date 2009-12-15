@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestLibrary < Test::Unit::TestCase
+class TestPhotoSet < Test::Unit::TestCase
   context "#initialize" do
     setup do
       @photoset = PhotoSet.new()

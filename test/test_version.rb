@@ -1,11 +1,11 @@
 require 'helper'
 
 
-class TestPhoto < Test::Unit::TestCase
+class TestVersion < Test::Unit::TestCase
   context "intialize" do
     setup do
       @photo = Photo.new(SAMPLE_PHOTO_PATH)
-      @version = Version.new(SAMPLE_FILENAME, @photo)
+      @version = Version.new(SAMPLE_FILENAME, {}, @photo)
     end
 
     
@@ -17,22 +17,14 @@ class TestPhoto < Test::Unit::TestCase
       assert File.directory?(@version.photo.path)
     end
     
-    should "have nil for attributes" do
-      assert @version.attributes.nil?
+    should "have hash for attributes" do
+      assert_instance_of(Hash, @version.attributes)
     end
-    
-    
   end
   
-  context "parse" do
-    setup do
-      @photo = Photo.new(SAMPLE_PHOTO_PATH)
-      @version = Version.new(SAMPLE_FILENAME, @photo)
-      @version.parse
-    end
-
-    should "use plist gem and make hash" do
-      assert_instance_of(Hash, @version.attributes)
+  context "parsed version" do
+    setup do 
+      @version = SAMPLE_LIBRARY.find_photo_by_path(SAMPLE_PHOTO_PATH).versions.first
     end
     
     should "pick out the right uuid for the version" do
@@ -44,7 +36,4 @@ class TestPhoto < Test::Unit::TestCase
     end
   end
   
-  
-  
-
 end

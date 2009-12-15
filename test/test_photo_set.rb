@@ -10,15 +10,17 @@ class TestPhotoSet < Test::Unit::TestCase
       assert_instance_of(Aperture::PhotoSet, @photoset)
     end
     
-    should "set photos attribute to an empty array" do
-      assert_equal @photoset.photos, []
+    should "photos should be a empty hash" do
+      assert_instance_of(Hash, @photoset.photos)
+      assert @photoset.photos.empty?
     end
+    
   end
   
   context "<<" do
     setup do
       @photoset = PhotoSet.new()
-      @photo = Photo.new(SAMPLE_PHOTO_PATH)
+      @photo = SAMPLE_LIBRARY.photos[SAMPLE_PHOTO_UUID]
     end
 
     should "adding an photo should increase the size by 1" do

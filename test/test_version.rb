@@ -24,7 +24,7 @@ class TestVersion < Test::Unit::TestCase
   
   context "parsed version" do
     setup do 
-      @version = SAMPLE_LIBRARY.find_photo_by_path(SAMPLE_PHOTO_PATH).versions.first
+      @version = SAMPLE_LIBRARY.photos[SAMPLE_PHOTO_UUID].version(1)
     end
     
     should "pick out the right uuid for the version" do

@@ -8,8 +8,8 @@ module Aperture
       raise ArgumentError, "Requires valid directory path" unless File.directory?(root)
       @root = root 
       @photos = Aperture::PhotoSet.new
-      @albums = []
-      @projects = []
+      @albums = {}
+      @projects = {}
       @versions = {}
     end    
     
@@ -24,30 +24,42 @@ module Aperture
       files.select {|p| p =~ /\.approject$/ }.each do |path|
         project = Project.new
         project.attributes = Plist::parse_xml(File.join(path, 'Info.apfolder'))
-        library.projects << project
+        library.projects[project.attributes['uuid']] = project
       end
       
       # Photo Masters
       files.select {|p| p =~ /Info\.apmaster$/}.each do |path|
-        photo = library.add_photo(File.dirname(path))
+        photo = Photo.new(File.dirname(path))
         photo.master_attributes = Plist::parse_xml(path)
+        photo.master_attributes['path']
+        library.photos << photo
       end
       
       # Photo Files
       files.select {|p| p =~ /\.apfile$/}.each do |path|
-        photo = library.find_photo_by_path(File.dirname(path))
-        photo.file_attributes = Plist::parse_xml(path)
+        file_attributes = Plist::parse_xml(path)
+        library.photos[file_attributes['masterUuid']].file_attributes = file_attributes
       end
             
       # Versions
       files.select {|p| p =~ /Version-.+\.apversion$/}.each do |path|
         directory, filename = File.dirname(path), File.basename(path)
-        
-        photo =  library.find_photo_by_path(directory)
         attributes = Plist::parse_xml(path)
+
+        # find associated photo
+        photo =  library.photos[attributes['masterUuid']]
+        
+        # build version object
         version = Version.new(filename, attributes, photo)
+                        
+        # add version to photo
         photo.versions << version
+        
+        # add verion to library
         library.versions[version.attributes['uuid']] = version
+        
+        # add version's photo to project
+        library.projects[version.attributes['projectUuid']].photos << version.photo
       end
       
       # Albums
@@ -57,31 +69,17 @@ module Aperture
         attributes['filename'] = File.basename(path)
         album = Album.new(attributes)
         
-        library.albums << album
+        library.albums[album.attributes['InfoDictionary']['uuid']] = album
         
         if version_ids = album.attributes['InfoDictionary'] && album.attributes['InfoDictionary']['versionUuids'] 
-          album.photos = version_ids.
-            map {|id| library.versions[id]}.
-            map {|v| v.photo}.
-            uniq
-          
           version_ids.each do |id|
+            album.photos[library.versions[id].attributes['masterUuid']] = library.versions[id].photo
             library.versions[id].photo.albums << album unless library.versions[id].photo.albums.include?(album)
           end 
         end
       end
       
       return library
-    end
-    
-    def find_photo_by_path(path)
-      return @photos.select {|p| p.path == path}.first
-    end
-    
-    def add_photo(directory)  
-      photo = Photo.new(directory)
-      @photos << photo
-      return photo
     end
   end
 end

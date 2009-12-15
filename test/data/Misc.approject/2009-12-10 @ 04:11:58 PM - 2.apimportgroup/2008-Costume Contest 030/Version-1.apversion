@@ -2,12 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>RKImageAdjustments</key>
+	<array/>
 	<key>colorLabelIndex</key>
 	<integer>-1</integer>
 	<key>createDate</key>
 	<date>2009-12-11T00:11:58Z</date>
 	<key>dateLastSavedInDatabase</key>
-	<date>2009-12-11T18:15:14Z</date>
+	<date>2009-12-15T17:50:00Z</date>
 	<key>exifProperties</key>
 	<dict>
 		<key>ApertureValue</key>
@@ -86,15 +88,15 @@
 	<key>fileUuid</key>
 	<string>oY29qKB6RSy27UeAhpczdA</string>
 	<key>fullSizePreviewChangeDate</key>
-	<date>2009-12-11T00:12:00Z</date>
+	<date>2009-12-15T17:49:59Z</date>
 	<key>fullSizePreviewPath</key>
 	<string>2009-12-10 @ 04:11:58 PM - 2.apimportgroup/2008-Costume Contest 030/Previews/2008-Costume Contest 030.jpg</string>
 	<key>fullSizePreviewUpToDate</key>
-	<integer>1</integer>
+	<true/>
 	<key>hasAdjustments</key>
-	<integer>0</integer>
+	<false/>
 	<key>hasEnabledAdjustments</key>
-	<integer>0</integer>
+	<false/>
 	<key>imageDate</key>
 	<date>2008-10-31T20:50:04Z</date>
 	<key>imageTimeZoneName</key>
@@ -115,13 +117,13 @@
 	<key>masterHeight</key>
 	<integer>2816</integer>
 	<key>masterThumbnailCacheIndex</key>
-	<integer>5</integer>
+	<integer>21</integer>
 	<key>masterUuid</key>
 	<string>wNOJs+P3RTOwER5t4jDmog</string>
 	<key>masterWidth</key>
 	<integer>2112</integer>
 	<key>miniCacheIndex</key>
-	<integer>2</integer>
+	<integer>14</integer>
 	<key>name</key>
 	<string>2008-Costume Contest 030</string>
 	<key>previewJpegHeight</key>
@@ -143,15 +145,15 @@
 	<key>stackUuid</key>
 	<string>SGT0VXgDQESX+59FltjItw</string>
 	<key>thumbnailCacheIndex</key>
-	<integer>3</integer>
+	<integer>20</integer>
 	<key>thumbnailPreviewPath</key>
 	<string>2009-12-10 @ 04:11:58 PM - 2.apimportgroup/2008-Costume Contest 030/Thumbnails/2008-Costume Contest 030.jpg</string>
 	<key>thumbnailRendered</key>
 	<integer>0</integer>
 	<key>thumbnailsCurrent</key>
-	<integer>1</integer>
+	<true/>
 	<key>tinyCacheIndex</key>
-	<integer>2</integer>
+	<integer>14</integer>
 	<key>uuid</key>
 	<string>QlfG7SKqSEWS1at7PMg8kw</string>
 	<key>version</key>

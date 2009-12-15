@@ -101,11 +101,11 @@
 		<key>createDate</key>
 		<date>2009-12-14T09:44:51Z</date>
 		<key>dateLastSavedInDatabase</key>
-		<date>2009-12-14T09:46:05Z</date>
+		<date>2009-12-15T19:05:00Z</date>
 		<key>folderUuid</key>
 		<string>Kj1eGir7SyiZ1B/uQrgfcQ</string>
 		<key>metadataChangeDate</key>
-		<date>2009-12-14T09:46:05Z</date>
+		<date>2009-12-15T19:04:56Z</date>
 		<key>name</key>
 		<string>TestRootAlbum.apalbum</string>
 		<key>sortAscending</key>
@@ -119,7 +119,17 @@
 		<key>versionUuids</key>
 		<array>
 			<string>kpK4rJKCTsS6MnPpmapcPQ</string>
+			<string>bokzJkCMSGa3pp/+sdBRAA</string>
 		</array>
 	</dict>
+	<key>StackStates</key>
+	<array>
+		<dict>
+			<key>isExpanded</key>
+			<true/>
+			<key>stackUuid</key>
+			<string>SGT0VXgDQESX+59FltjItw</string>
+		</dict>
+	</array>
 </dict>
 </plist>

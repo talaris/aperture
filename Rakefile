@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "aperture"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Statistical analysis library for Aperture Photo Libraries}
+    gem.description = %Q{Parses out the files from a Aperture Photo Library to give useful figures and check consistancy of the Library itself.}
     gem.email = "kyle.burckhard@gmail.com"
     gem.homepage = "http://github.com/talaris/aperture"
     gem.authors = ["Kyle Burckhard"]

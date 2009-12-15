@@ -15,6 +15,5 @@ class TestProject < Test::Unit::TestCase
       assert_instance_of Hash, @project.attributes
     end
   end
-  
-  
+    
 end

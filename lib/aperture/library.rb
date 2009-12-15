@@ -2,7 +2,7 @@ require 'find'
 
 module Aperture
   class Library
-    attr_reader :root, :photos, :albums, :projects
+    attr_reader :root, :photos, :albums, :projects, :versions
     
     def initialize(root)
       raise ArgumentError, "Requires valid directory path" unless File.directory?(root)
@@ -10,6 +10,7 @@ module Aperture
       @photos = Aperture::PhotoSet.new
       @albums = []
       @projects = []
+      @versions = {}
     end    
     
     def self.parse(root_path)
@@ -28,15 +29,13 @@ module Aperture
       
       # Photo Masters
       files.select {|p| p =~ /Info\.apmaster$/}.each do |path|
-        directory = File.dirname(path)
-        photo = library.add_photo(directory)
+        photo = library.add_photo(File.dirname(path))
         photo.master_attributes = Plist::parse_xml(path)
       end
       
       # Photo Files
       files.select {|p| p =~ /\.apfile$/}.each do |path|
-        directory = File.dirname(path)
-        photo = library.find_photo_by_path(directory)
+        photo = library.find_photo_by_path(File.dirname(path))
         photo.file_attributes = Plist::parse_xml(path)
       end
             
@@ -46,18 +45,30 @@ module Aperture
         
         photo =  library.find_photo_by_path(directory)
         attributes = Plist::parse_xml(path)
-        photo.versions << Version.new(filename, attributes, photo)
+        version = Version.new(filename, attributes, photo)
+        photo.versions << version
+        library.versions[version.attributes['uuid']] = version
       end
       
       # Albums
       files.select {|p| p =~ /\.apalbum/ }.each do |path|
-        # directory, filename = File.dirname(path), File.basename(path)
-        attributes = Plist::parse_xml( path)
+        attributes = Plist::parse_xml(path)
         attributes['directory'] = File.dirname(path)
         attributes['filename'] = File.basename(path)
         album = Album.new(attributes)
         
         library.albums << album
+        
+        if version_ids = album.attributes['InfoDictionary'] && album.attributes['InfoDictionary']['versionUuids'] 
+          album.photos = version_ids.
+            map {|id| library.versions[id]}.
+            map {|v| v.photo}.
+            uniq
+          
+          version_ids.each do |id|
+            library.versions[id].photo.albums << album unless library.versions[id].photo.albums.include?(album)
+          end 
+        end
       end
       
       return library

@@ -1,10 +1,18 @@
 require 'find'
 
 module Aperture
+  
+  # = Overview
+  # The Library object parses and organizes the collection of objects that make up an aperture 
+  # photo library. From the object you can access information about the Versions, Photos, 
+  # Albums and Projects contained in the Library.
+  #
+  # *Note* Depending on the size of the Aperture photo library parsing it into ruby objects 
+  # may take serveral minutes.
   class Library
     attr_reader :root, :photos, :albums, :projects, :versions
     
-    def initialize(root)
+    def initialize(root) # :nodoc:
       raise ArgumentError, "Requires valid directory path" unless File.directory?(root)
       @root = root 
       @photos = Aperture::PhotoSet.new
@@ -13,6 +21,8 @@ module Aperture
       @versions = {}
     end    
     
+    # This the key method for parsing the library, it requires the path of where the library
+    # exists on disk. It returns a fully parsed Library object. 
     def self.parse(root_path)
       library = new(root_path)
       files = []  

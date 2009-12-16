@@ -1,6 +1,8 @@
 = aperture
 
-Description goes here.
+Library that converts the set of plist files from a Aperture photo library into ruby objects. Everything is parsed from a root location into projects, albums, photos and versions. Also gives you access to statistical information for the library as a whole, as well as projects and albums, see +Aperture::PhotoSet+.
+
+This gem requires the +plist+ gem.
 
 == Note on Patches/Pull Requests
  

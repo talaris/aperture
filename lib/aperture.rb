@@ -1,7 +1,7 @@
 # = Overview
 # To use this libray check the Aperture::Library documentation and Library#parse
 module Aperture
-  VERSION = "0.2.0"
+  VERSION = "0.3.2"
 end
 
 

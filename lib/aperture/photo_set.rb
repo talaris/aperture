@@ -80,7 +80,12 @@ module Aperture
       return hash
     end
     
-    # def find_photos_by_keyword
+    # Returns a new PhotoSet where the photos match the passed keyword
+    def find_by_keyword(keyword)
+      versions = map {|p| p.versions }.flatten
+      matching = versions.select {|v| v.attributes['keywords'] && v.attributes['keywords'].include?(keyword) }
+      return PhotoSet.new(matching.map{|v| v.photo}.uniq)
+    end
     
     # def find_photos_by_rating
       

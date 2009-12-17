@@ -29,24 +29,6 @@ class TestPhotoSet < Test::Unit::TestCase
     end
   end
   
-  # context "each" do
-  #   setup do
-  #     @photoset = PhotoSet.new()
-  #     @photo = Photo.new(SAMPLE_PHOTO_PATH)
-  #   end
-  # 
-  #   should "iterate over all the photos" do
-  #     versions = 0
-  #     @photoset.each {|p| versions += p.versions.size}
-  #     assert_equal versions, 12
-  #   end
-  #   
-  #   should "give us access to inject" do
-  #     versions = @photoset.map {|p| p.versions.size }
-  #     assert_equal versions, [2]*6
-  #   end
-  # end
-  
   context "photo_count" do
     setup do
       @library = SAMPLE_LIBRARY
@@ -88,5 +70,17 @@ class TestPhotoSet < Test::Unit::TestCase
       assert_equal @library.photos.lens_model_count_hash[lens_model], 12
     end
   end
+  
+  context "find_by_keyword" do
+    setup do
+      @library = SAMPLE_LIBRARY
+    end
+
+    should "should find 9 'Racing' photos" do
+      assert_instance_of(Aperture::PhotoSet, @library.photos.find_by_keyword('Racing'))
+      assert_equal @library.photos.find_by_keyword('Racing').size, 9
+    end
+  end
+  
   
 end

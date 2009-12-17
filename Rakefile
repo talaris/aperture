@@ -10,6 +10,7 @@ begin
     gem.email = "kyle.burckhard@gmail.com"
     gem.homepage = "http://github.com/talaris/aperture"
     gem.authors = ["Kyle Burckhard"]
+    gem.add_dependency('plist', '>= 3.0.0')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

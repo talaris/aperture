@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{aperture}
-  s.version = "0.3.2"
+  s.version = "0.3.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kyle Burckhard"]
-  s.date = %q{2009-12-16}
+  s.date = %q{2009-12-20}
   s.description = %q{Parses out the files from a Aperture Photo Library to give useful figures and check consistancy of the Library itself.}
   s.email = %q{kyle.burckhard@gmail.com}
   s.extra_rdoc_files = [

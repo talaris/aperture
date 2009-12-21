@@ -1,0 +1,12 @@
+== 0.3.3 / 2009-12-20
+  * Added verbose output on Library#parse, optional dependency on ruby-progressbar
+
+== 0.3.2 / 2009-12-16
+  * Added plist dependency to gemspec
+  * Added find_by_keyword to PhotoSet
+
+== 0.3.1 / 2009-12-16
+  * Updated rdocs
+
+== 0.3.0 / 2008-12-16
+  * First public release

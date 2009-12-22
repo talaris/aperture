@@ -47,7 +47,7 @@ module Aperture
         files << path
       end
       
-      puts "#{(Time.now - st)} seconds"
+      puts "#{(Time.now - st)} seconds" if verbose
       
       # Projects
       files_projects = files.select {|p| p =~ /\.approject$/ }

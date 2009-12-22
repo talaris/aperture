@@ -1,3 +1,6 @@
+== 0.3.5 / 2009-12-22
+  * Fixed a bug introduced in 0.3.3 when not using verbose output
+
 == 0.3.4 / 2009-12-22
   * Added missing development dependency for shoulda
 
